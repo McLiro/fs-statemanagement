@@ -10,12 +10,12 @@ const AnecdoteList = () => {
 
   const vote = anecdote => {
     addVote(anecdote.id)
-    notify(`You voted '${anecdote.content}'`)
+    notify(`you voted '${anecdote.content}'`)
   }
 
   const remove = anecdote => {
     removeAnecdote(anecdote.id)
-    notify(`You deleted '${anecdote.content}'`)
+    notify(`you deleted '${anecdote.content}'`)
   }
 
   return (
