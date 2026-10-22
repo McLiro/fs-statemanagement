@@ -3,7 +3,6 @@ import { useNotificationControls } from "../notificationStore"
 
 const AnecdoteList = () => {
   const anecdotes = useAnecdotes()
-  const sortedAnecdotes = anecdotes.toSorted((a, b) => b.votes - a.votes)
 
   const { addVote, removeAnecdote } = useAnecdotesControls()
   const { notify } = useNotificationControls()
@@ -20,7 +19,7 @@ const AnecdoteList = () => {
 
   return (
     <>
-      {sortedAnecdotes.map((anecdote) => (
+      {anecdotes.map((anecdote) => (
         <div key={anecdote.id}>
           <div>{anecdote.content}</div>
           <div>

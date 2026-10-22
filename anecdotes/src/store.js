@@ -36,7 +36,9 @@ export const useAnecdotes = () => {
   const anecdotes = useAnecdoteStore((state) => state.anecdotes)
   const filter = useAnecdoteStore((state) => state.filter)
 
-  return anecdotes.filter(a => a.content.toLowerCase().includes(filter.toLowerCase()))
+  return anecdotes
+    .filter(a => a.content.toLowerCase().includes(filter.toLowerCase()))
+    .sort((a, b) => b.votes - a.votes)
 }
 export const useAnecdotesControls = () => useAnecdoteStore((state) => state.actions)
 export default useAnecdoteStore
