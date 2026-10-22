@@ -52,4 +52,12 @@ describe('useAnecdotes', () => {
 
     expect(result.current.map(a => a.votes)).toEqual([5, 1, 0])
   })
+
+  it('returned anecdotes are properly filtered', () => {
+    useAnecdoteStore.setState({ filter: '2' })
+
+    const { result } = renderHook(() => useAnecdotes())
+
+    expect(result.current).toEqual([anecdotes[1]])
+  })
 })
