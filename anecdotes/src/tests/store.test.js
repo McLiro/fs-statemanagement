@@ -34,6 +34,34 @@ describe('useAnecdotesControls', () => {
     expect(anecdoteService.getAll).toHaveBeenCalledTimes(1)
     expect(useAnecdoteStore.getState().anecdotes).toEqual(mockAnecdotes)
   })
+
+  it('voting increases the number of votes for an anecdote', async () => {
+    const anecdotes = [
+      { content: 'mock anecdote1', id: 1, votes: 1 },
+      { content: 'mock anecdote2', id: 2, votes: 5 }
+    ]
+    useAnecdoteStore.setState({ anecdotes })
+
+    const updated = { content: 'mock anecdote2', id: 2, votes: 6 }
+    anecdoteService.update.mockResolvedValue(updated)
+
+    const { result } = renderHook(() => useAnecdotesControls())
+
+    await act(async () => {
+      await result.current.addVote(2)
+    })
+
+    expect(anecdoteService.update).toHaveBeenCalledTimes(1)
+    expect(anecdoteService.update).toHaveBeenCalledWith(2, {
+      content: 'mock anecdote2',
+      id: 2,
+      votes: 6
+    })
+    expect(useAnecdoteStore.getState().anecdotes).toEqual([
+      anecdotes[0],
+      updated
+    ])
+  })
 })
 
 describe('useAnecdotes', () => {
