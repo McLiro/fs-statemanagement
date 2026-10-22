@@ -12,3 +12,4 @@ const useNotificationStore = create((set) => ({
 
 export const useNotification = () => useNotificationStore(state => state.notification)
 export const useNotificationControls = () => useNotificationStore(state => state.actions)
+export default useNotificationStore
