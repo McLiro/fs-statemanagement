@@ -14,7 +14,7 @@ const App = () => {
   }
 
   if (isError) {
-    return <div>anecdote service not available due to issues with the server</div>
+    return <div>anecdote service not available due to problems in server</div>
   }
 
   return (
