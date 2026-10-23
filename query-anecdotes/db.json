@@ -1,54 +1,29 @@
 {
   "anecdotes": [
     {
-      "content": "If it hurts, do it more often",
-      "id": "47145",
+      "id": "c1cc1eac-ecf1-4433-a58a-c4373d6ff832",
+      "content": "Make it work, then make it fast",
+      "votes": 0
+    },
+    {
+      "id": "a092611b-06f9-4329-8132-cc74168eb5d6",
+      "content": "There are two hard things in computer science",
       "votes": 3
     },
     {
-      "content": "Adding manpower to a late software project makes it later!",
-      "id": "21149",
-      "votes": 2
+      "id": "c956025a-0613-453f-a753-4314abf37093",
+      "content": "Untested code is broken code",
+      "votes": 3
     },
     {
-      "content": "The first 90 percent of the code accounts for the first 90 percent of the development time...The remaining 10 percent of the code accounts for the other 90 percent of the development time.",
-      "id": "69581",
-      "votes": 0
+      "id": "ef35021e-ced2-4ee1-9022-9ce296753750",
+      "content": "Simplicity is the ultimate sophistication",
+      "votes": 5
     },
     {
-      "content": "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",
-      "id": "36975",
-      "votes": 0
-    },
-    {
-      "content": "Premature optimization is the root of all evil.",
-      "id": "25170",
-      "votes": 0
-    },
-    {
-      "content": "Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.",
-      "id": "98312",
-      "votes": 0
-    },
-    {
-      "content": "Testing testing testing...",
-      "votes": 1,
-      "id": "6efbd466-31be-40db-9b66-d2a3e78abc31"
-    },
-    {
-      "content": "testing more...",
-      "votes": 2,
-      "id": "a0fd7037-e902-4b1f-b4d3-f558ad31f0d3"
-    },
-    {
-      "content": "notifications test?",
-      "votes": 0,
-      "id": "d9fc4c0d-9091-4ba5-b125-c689c4bec080"
-    },
-    {
-      "content": "just one more test...",
-      "votes": 1,
-      "id": "2fea6628-e044-4b6a-90dc-b82085d2f963"
+      "id": "8c607749-c4f8-4144-a0d0-84c28abd7203",
+      "content": "Real artists ship code",
+      "votes": 7
     }
   ]
 }
