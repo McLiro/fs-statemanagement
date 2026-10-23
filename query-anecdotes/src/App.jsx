@@ -4,7 +4,7 @@ import Notification from './components/Notification'
 
 const App = () => {
   const handleVote = (anecdote) => {
-    console.log('vote')
+    addVote(anecdote)
   }
 
   const { anecdotes, isPending, isError, addAnecdote, addVote } = useAnecdotes()
