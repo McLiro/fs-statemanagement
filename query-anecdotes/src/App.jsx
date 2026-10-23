@@ -1,3 +1,4 @@
+import { useAnecdotes } from './queries'
 import AnecdoteForm from './components/AnecdoteForm'
 import Notification from './components/Notification'
 
@@ -6,13 +7,15 @@ const App = () => {
     console.log('vote')
   }
 
-  const anecdotes = [
-    {
-      content: 'If it hurts, do it more often',
-      id: '47145',
-      votes: 0,
-    },
-  ]
+  const { anecdotes, isPending, isError, addAnecdote, addVote } = useAnecdotes()
+
+  if (isPending) {
+    return <div>loading data...</div>
+  }
+
+  if (isError) {
+    return <div>anecdote service not available due to issues with the server</div>
+  }
 
   return (
     <div>
